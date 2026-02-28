@@ -110,7 +110,7 @@ body {
     margin-top: 5rem;
     margin-right: 10rem;
     margin-left: 10rem;
-    font-size: 1rem;
+
     font-weight: bold;
     border-style: solid hidden;
     transition:  0.4s ease, box-shadow 0.4s ease;
@@ -118,6 +118,11 @@ body {
 .aboutme:hover {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
+}
+.aboutme span {
+    font-size: 1rem;
+    color:darkgray;
+    
 }
 
 
@@ -133,6 +138,7 @@ body {
     flex-wrap: wrap;
     transition:  0.4s ease, box-shadow 0.4s ease;
     border-style:  solid hidden;
+    
 
 }
 .skill:hover {
@@ -150,6 +156,7 @@ body {
     margin-left: 2rem;
     font-weight: bold;
     font-size: 1rem;
+    color:darkgray
 
 }
 
@@ -182,6 +189,11 @@ body {
     transition:  0.4s ease, box-shadow 0.4s ease;
     font-weight: bold;
     font-size: 1rem;
+    
+}
+.project span {
+    color:darkgray;
+    padding:1rem;
 }
 .project:hover {
     transform: translateY(-6px);
@@ -235,15 +247,17 @@ footer .contact {
     color: #fff;
     background: transparent;
     transition: 0.4s linear, box-shadow 0.4s ease;
-    
-
+    text-decoration: none;
 }
+
 .resume:hover {
     background: #fff;
     color: #000;
     font-weight: 600;
     box-shadow: 10px 10px 40px  black;
+    
 }
+
 .aboutme, .skill, .project, footer .contact {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
