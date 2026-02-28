@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marikannan portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+
+                <div class="name">
+                    <span>Marikannan G</span>
+                </div>
+
+
+                <div class="links">
+                    
+                    <div class="link"><a href="#about">About Me</a></div>
+                    <div class="link"><a href="#skills">Skills</a></div>
+                    <div class="link"><a href="#projects">Projects</a></div>
+                    <div class="link"><a href="#contact">Contact</a></div>
+                </div>
+
+
+                <div class="hamburger" onclick="showSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+
+                <div class="dropdown">
+                    <div class="linked">
+                        
+                        <a href="#about">About Me</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="close" onclick="closeSidebar()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <section>
+
+        <div class="aboutme">
+            <h2>About Me</h2>
+            <p> <span>I’m Marikannan G</span>, a passionate and detail-oriented Developer who enjoys building clean,
+                responsive,
+                and user-friendly digital experiences. I focus on creating well-structured solutions that are both
+                functional and visually appealing.
+
+                I’m constantly learning and improving my skills by working on projects and solving problems that
+                challenge my logical thinking and creativity. I enjoy understanding how systems work, refining
+                designs, and optimizing workflows to deliver better results.
+
+                My goal is to grow into a highly skilled professional developer and contribute to meaningful
+                projects that create real-world impact. I strongly believe in continuous learning, consistency, and
+                writing clean, maintainable code.</p>
+
+        </div>
+
+    </section>
+    <section>
+
+        <div class="skill">
+            <div class="skill-heading">
+                <h2>Skills</h2>
+            </div>
+            <div class="skill-description">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Strong understanding of software development fundamentals</li>
+                    <li>Ability to build clean, structured, and scalable solutions</li>
+                    <li>Experience in creating responsive and user-friendly applications</li>
+                    <li>Familiar with debugging, testing, and optimizing code for performance</li>
+                    <li>Good knowledge of version control and collaborative workflows</li>
+                </ul>
+            </div>
+            <div class="skill-description">
+                <h3>Problem Solving</h3>
+                <ul>
+                    <li>Logical and analytical thinking</li>
+                    <li>Ability to break complex problems into simple, manageable steps</li>
+                    <li>Comfortable learning new tools and adapting to different challenges</li>
+                    <li>Focused on writing efficient and maintainable solutions</li>
+                </ul>
+            </div>
+            <div class="skill-description">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Good communication and teamwork skills</li>
+                    <li>Time management and consistency</li>
+                    <li>Willingness to take feedback and improve</li>
+                    <li>Strong motivation to grow as a professional developer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="project">
+            <h2>Projects</h2>
+            <div>
+                <h3>Project 1: Recipe Helper</h3>
+                <p>Recipe Helper is a user-friendly web application designed to help users discover, plan, and prepare
+                    meals easily. The website allows users to explore a wide variety of recipes based on ingredients,
+                    preferences, or meal types, making everyday cooking simpler and more enjoyable.
+
+                    The platform focuses on providing clear step-by-step instructions, organized ingredient lists, and
+                    an intuitive layout that ensures a smooth user experience. It helps users save time by suggesting
+                    recipes that match available ingredients and dietary needs.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="contact">
+            <a href="https://github.com/marikannan1052007-debug"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/marikannan-g-229a43357"><i class="fa-brands fa-linkedin"></i></a>
+            <i class="fa-solid fa-envelope"></i>
+            <p>marikannan105@gmail.com</p>
+            <i class="fa-solid fa-phone"></i>
+            <p>+91 9080841973</p>
+            <button class="resume">Download Resume</button>
+        </div>
+    </footer>
+    <script>
+        let sidebarOpen = false;
+
+        function showSidebar() {
+            const dropdown = document.querySelector(".dropdown");
+            sidebarOpen = !sidebarOpen;
+            console.log("Sidebar toggled:", sidebarOpen);
+            dropdown.style.transform = sidebarOpen ? 'translateY(0px)' : 'translateY(-100%)';
+            console.log("Transform set to:", dropdown.style.transform);
+        }
+
+        function closeSidebar() {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.style.transform = 'translateY(-100%)';
+            sidebarOpen = false;
+            console.log("Sidebar closed");
+        }
+    </script>
+
+
+
+</body>
+
+</html>

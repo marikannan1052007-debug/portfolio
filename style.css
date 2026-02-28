@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg, #1d2671, #c33764);}
+
+.nav-container {
+    padding: 20px;
+    display: flex;
+
+    align-items: center;
+
+}
+
+.nav-container .name {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    transition: 0.5s linear;
+    text-shadow: 10px 10px 7px rgba(9, 9, 9, 0.5);
+
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 35px;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+
+
+}
+
+.nav-container .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: 0.2s linear;
+}
+.hamburger, .close {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    right:15px;
+    top:10px;
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%)blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.dropdown .linked a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    padding: 15px 0;
+    color: white;
+    transition: 0.2s linear;
+}
+
+.dropdown .linked a:hover {
+    background: #ebe5e5;
+    color: #000;
+    font-weight: 600;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    border: 2px solid;
+    border-radius: 30px;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-style: solid hidden;
+    transition:  0.4s ease, box-shadow 0.4s ease;
+}
+.aboutme:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 10px 40px  black;
+}
+
+
+
+.skill {
+    display: flex;
+    padding: 2.5rem;
+    border: 2px solid;
+    border-radius: 30px;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    flex-wrap: wrap;
+    transition:  0.4s ease, box-shadow 0.4s ease;
+    border-style:  solid hidden;
+
+}
+.skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 10px 40px  black;
+}
+
+.skill-description {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 45px;
+    padding-right: 1rem;
+    align-items: center;
+    gap:1rem;
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+ .skill .skill-heading {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-right: 3rem;
+    
+
+    
+ }
+ 
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding: 2rem;
+    border: 2px solid;
+    border-radius: 30px;
+    border-style:  solid hidden;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    transition:  0.4s ease, box-shadow 0.4s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 10px 40px  black;
+}
+
+footer .contact {
+    border: 2px solid;
+    border-radius: 30px;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    ;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 5rem;
+    padding-left: 7rem ;
+    padding-right: 7rem;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis:300px ;
+    transition: 0.4s linear, box-shadow 0.4s ease;
+    font-weight: bold;
+}
+.contact:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 10px 40px  black;
+}
+
+.contact i {
+
+    font-size: 2rem;
+    transition: 0.2s linear;
+    color: black;
+}
+
+.resume {
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background: transparent;
+    transition: 0.4s linear, box-shadow 0.4s ease;
+    
+
+}
+.resume:hover {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 10px 10px 40px  black;
+}
+.aboutme, .skill, .project, footer .contact {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+
+@media (max-width: 884px) {
+
+    
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 0 1rem;
+    }
+
+    
+    .nav-container {
+        padding: 10px;
+        justify-content: space-between;
+        
+    }
+
+    .nav-container .name {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown .close {
+        display: block;
+    }
+
+    .dropdown {
+        transform: translateY(-100%);
+    }
+
+    
+    .aboutme {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .aboutme span {
+        font-size: 1.2rem;
+    }
+
+    
+    .skill {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .skill-heading {
+        padding-right: 0;
+    }
+
+    .skill-description {
+        padding-right: 0;
+    }
+
+   
+    .project {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+   
+    footer .contact {
+        margin: 2rem 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .contact p {
+        font-size: 0.9rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .resume {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
