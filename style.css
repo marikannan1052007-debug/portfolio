@@ -110,19 +110,19 @@ body {
     margin-top: 5rem;
     margin-right: 10rem;
     margin-left: 10rem;
-
     font-weight: bold;
     border-style: solid hidden;
     transition:  0.4s ease, box-shadow 0.4s ease;
 }
-.aboutme:hover {
+#about:target .aboutme {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
 }
+
+
 .aboutme span {
     font-size: 1rem;
-    color:darkgray;
-    
+    color:darkgray; 
 }
 
 
@@ -141,7 +141,7 @@ body {
     
 
 }
-.skill:hover {
+#skills:target .skill {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
 }
@@ -192,11 +192,11 @@ body {
     font-size: 1rem;
     
 }
-.project span {
+.projects span {
     color:darkgray;
     padding:1rem;
 }
-.project:hover {
+#projects:target .project {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
 }
@@ -227,7 +227,7 @@ footer .contact {
     transition: 0.4s linear, box-shadow 0.4s ease;
     font-weight: bold;
 }
-.contact:hover {
+#contacts:target .contact {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
 }
