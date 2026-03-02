@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -49,6 +52,12 @@ body {
     padding: 5px 10px;
     border-radius: 25px;
     transition: 0.2s linear;
+}
+.nav-container .links a:hover {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 10px 10px 40px  black;
 }
 .hamburger, .close {
     display: none;
@@ -107,12 +116,12 @@ body {
     padding: 2rem;
     border: 2px solid;
     border-radius: 30px;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-right: 10rem;
     margin-left: 10rem;
     font-weight: bold;
     border-style: solid hidden;
-    transition:  0.4s ease, box-shadow 0.4s ease;
+    transition:  0.5s ease, box-shadow 0.4s ease;
 }
 #about:target .aboutme {
     transform: translateY(-6px);
@@ -122,21 +131,43 @@ body {
 
 .aboutme span {
     font-size: 1rem;
-    color:darkgray; 
+    color:rgb(225, 213, 213); 
 }
+.aboutme h2 {
+    position: relative;
+    width:max-content;
+    padding: 3px;
+}
+.aboutme h2::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: darkgrey;
+    position:absolute;
+    border-radius: 5px;
+    bottom: 0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s linear;
 
+    
+}
+  #about:target .aboutme h2::after {
+    transform: scaleX(1);
 
+  }
 
 .skill {
     display: flex;
     padding: 2.5rem;
     border: 2px solid;
     border-radius: 30px;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-right: 10rem;
     margin-left: 10rem;
     flex-wrap: wrap;
-    transition:  0.4s ease, box-shadow 0.4s ease;
+    transition:  0.5s ease, box-shadow 0.4s ease;
     border-style:  solid hidden;
     
 
@@ -156,7 +187,7 @@ body {
     margin-left: 2rem;
     font-weight: bold;
     font-size: 1rem;
-    color:darkgray
+    color:rgb(217, 208, 208)
 
 }
 
@@ -169,10 +200,30 @@ body {
     gap: 1rem;
     padding-right: 3rem;
     font-size:1rem;
-    
+ }
+ .skill-heading h2 {
+    position: relative;
+    width:max-content;
+    padding:3px;
+}
+.skill-heading h2::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color:darkgray;
+    position:absolute;
+    border-radius: 5px;;
+    bottom: 0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s linear;
 
     
- }
+}
+  #skills:target .skill-heading h2::after {
+    transform: scaleX(1);
+  }
  
 .project {
     display: flex;
@@ -184,30 +235,54 @@ body {
     border: 2px solid;
     border-radius: 30px;
     border-style:  solid hidden;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-right: 10rem;
     margin-left: 10rem;
-    transition:  0.4s ease, box-shadow 0.4s ease;
+    transition:  0.5s ease, box-shadow 0.4s ease;
     font-weight: bold;
     font-size: 1rem;
     
 }
-.projects span {
-    color:darkgray;
+.project span {
+    color:rgb(213, 205, 205);
     padding:1rem;
 }
 #projects:target .project {
     transform: translateY(-6px);
     box-shadow: 10px 10px 40px  black;
-}
 
+}
+.project h2 {
+    position: relative;
+    width:max-content;
+    padding:3px;
+}
+.project h2::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color:darkgrey;
+    position:absolute;
+    border-radius: 5px;
+    bottom: 0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s linear;
+
+    
+}
+  #projects:target .project h2::after {
+    transform: scaleX(1);
+}
 footer .contact {
     border: 2px solid;
     border-radius: 30px;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-right: 10rem;
     margin-left: 10rem;
-    ;
+        border-style:  solid hidden;
+        
 }
 
 .contact {
@@ -224,7 +299,7 @@ footer .contact {
     flex-wrap: wrap;
     flex-grow: 1;
     flex-basis:300px ;
-    transition: 0.4s linear, box-shadow 0.4s ease;
+    transition: 0.5s linear, box-shadow 0.4s ease;
     font-weight: bold;
 }
 #contacts:target .contact {
@@ -243,6 +318,7 @@ footer .contact {
     padding: 10px 20px;
     border: 1px solid;
     border-radius: 25px;
+    
     font-size: 1.2rem;
     font-weight: 500;
     color: #fff;
@@ -263,6 +339,13 @@ footer .contact {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
 }
+.skill-description h3{
+    color:#000;
+    font-size:1.2rem;
+    padding: 1rem;
+    
+}
+ 
 
 
 @media (max-width: 884px) {
@@ -305,7 +388,7 @@ footer .contact {
 
     
     .aboutme {
-        margin: 2rem 1rem;
+        margin: 10rem 1rem;
         padding: 1.5rem;
         font-size: 0.95rem;
         text-align: center;
@@ -317,7 +400,7 @@ footer .contact {
 
     
     .skill {
-        margin: 2rem 1rem;
+        margin: 10rem 1rem;
         padding: 1.5rem;
         flex-direction: column;
         gap: 1.5rem;
@@ -333,7 +416,7 @@ footer .contact {
 
    
     .project {
-        margin: 2rem 1rem;
+        margin: 10rem 1rem;
         padding: 1.5rem;
         text-align: center;
     }
